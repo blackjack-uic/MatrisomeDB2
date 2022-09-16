@@ -4,7 +4,10 @@ from bokeh.transform import factor_cmap
 from bokeh.plotting import figure,output_file,save
 from bokeh.io import save, output_file, show
 from bokeh.embed import components
-
+import time
+from collections import defaultdict
+import numpy as np
+import re
 
 ptm_map_dict = {'Q\\[129\\]':'Gln deamidation','N\\[115\\]':'ASN deamidation',
                 'Q\\[111\\]':'Gln to pyroGln','C\\[143\\]':'selenocysteine',
